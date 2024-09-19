@@ -42,8 +42,35 @@ This project has direct applications in optimizing land field layouts, which can
     ```bash
     pip install -r requirements.txt
     ```
+<p>
+    Alternatively, you can install each package individually using the following commands:
+</p>
+
+<ul>
+    <li><code>numpy</code> - For numerical operations</li>
+    <li><code>matplotlib</code> - For plotting graphs and visualizations</li>
+    <li><code>time</code> - For compute execution time </li>
+</ul>
+
+<p>
+    Make sure to install these packages in the same environment where you plan to run the code. If you encounter any issues, refer to the package documentation or seek help from the community.
+</p>
 
 ## 💻 Usage
 Run the project with the following command:
 ```bash
 python main.py
+```
+
+
+## project_directory
+
+├── python/
+
+│ ├── main.py # Main script
+
+│ ├── util.py # # Rotate a point around a given center by a specified angle && checks if a point is inside a given triangle
+
+│ ├── plot.py # Updates GUI 
+
+│ └── test.py # # Calculates and plot the improvement percentage for a given length L

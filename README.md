@@ -171,6 +171,13 @@ In this study, we examine the optimal placement of a grid frame within a random 
   <br>
 </p>
 
+
+We collected data for lengths (\(L\)) ranging from 1 meter to 51 meters to analyze how the improvement factor relates to length over time. Our analysis involves three key variables:
+- **Length (\(L\))**: The range of lengths from 1 meter to 51 meters.
+- **Improvement Factor**: The measure of how much the optimization improves efficiency.
+- **Time**: Represented using color coding to visualize the relationship between length and improvement factor over different time periods.
+
+By examining these variables, we aim to understand the correlation between the length of the fields and the improvement factor, and how this relationship evolves over time. The use of color coding for time helps to clearly illustrate trends and patterns in the data, providing valuable insights into the performance and effectiveness of our optimization algorithm.
 # Computational Complexity
 
 The theoretical complexity of our algorithm is $$O(n^3)$$. Therefore, the computation time should follow this complexity. However, our data for small values of \(L\) appears to exhibit a more linear behavior. This discrepancy is concerning and may be due to the limited amount of data we currently have.

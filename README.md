@@ -12,7 +12,7 @@
 - [Contributing](#-contributing)
 - [License](#-license)
 
-## 🔍 Project Overview
+# 🔍 Project Overview
 - **Objective**: Optimize the placement of a grid within a triangle by rotating and shifting the grid to maximize or minimize the number of points inside the triangle.
 - **Key Features**:
   - **Geometric Algorithms**: Utilizes advanced algorithms to rotate points and check point inclusion within a triangle.
@@ -25,21 +25,36 @@
   
 </div>
 
+<p>
+  <br>
+</p>
 
-## 🛠 Technologies Used
+### 🛠 Technologies Used
 - **Python**: The core programming language for the project.
 - **NumPy**: For numerical computations and grid manipulations.
 - **Matplotlib**: For creating interactive plots and visualizations.
 
-## 🌍 Real-World Applications
+<p>
+  <br>
+</p>
+
+### 🌍 Real-World Applications
 This project has direct applications in optimizing land field layouts, which can significantly enhance agricultural planning, land surveying, and resource management. By increasing the efficiency of grid placements, we can better utilize space and improve overall productivity.
 
-## 📈 Highlights
+<p>
+  <br>
+</p>
+
+### 📈 Highlights
 - Achieved significant improvements in grid placement efficiency.
 - Developed a user-friendly interface for interactive exploration of geometric configurations.
 - Leveraged scientific computing techniques to solve complex geometric problems.
 
-## 🚀 Installation
+<p>
+  <br>
+</p>
+
+### 🚀 Installation
 1. Clone the repository:
     ```bash
     git clone https://github.com/your-username/optimal-grid-placement.git
@@ -63,14 +78,21 @@ This project has direct applications in optimizing land field layouts, which can
     Make sure to install these packages in the same environment where you plan to run the code. If you encounter any issues, refer to the package documentation or seek help from the community.
 </p>
 
-## 💻 Usage
+<p>
+  <br>
+</p>
+
+### 💻 Usage
 Run the project with the following command:
 ```bash
 python main.py
 ```
 
+<p>
+  <br>
+</p>
 
-## project_directory
+### project_directory
 
 ├── python/
 
@@ -81,6 +103,10 @@ python main.py
 │ ├── plot.py # Updates GUI 
 
 │ └── test.py # # Calculates and plot the improvement percentage for a given length L
+
+<p>
+  <br>
+</p>
 
 # Main Methodology
 
@@ -119,17 +145,45 @@ In this study, we examine the optimal placement of a grid frame within a random 
   <img src="pictures/comp_time_L_100m.png" alt="Figure 3" width="30%">
 </div>
 
+<p>
+  <br>
+</p>
 
 # Computational Complexity
 
-The theoretical complexity of our algorithm is $$O(n^3)$$. Therefore, the computation time should follow this complexity. However, our data for small values of \(L\) appears to exhibit a more linear behavior.
+The theoretical complexity of our algorithm is $$O(n^3)$$. Therefore, the computation time should follow this complexity. However, our data for small values of \(L\) appears to exhibit a more linear behavior. This discrepancy is concerning and may be due to the limited amount of data we currently have.
 
 <p align="center">
-  <img src="path/to/your/image.png" alt="Description of the image">
+  <img src="pictures/expected_time_vs_length.png" width="70%">
   <br>
-  <em>Figure 1: Expected curve for Computational time - Length</em>
+  <em>Figure 1: Expected Computational time - Length</em>
 </p>
 
+<p>
+  <br>
+</p>
+
+# Future Implementations
+
+To address this issue and improve our analysis, we propose the following future implementations:
+
+1. **Increase Data Collection**:
+   - **Expand Dataset**: Collect more data points, especially for larger values of \(L\), to better understand the algorithm's behavior across different scales.
+   - **Automated Data Collection**: Implement automated tools to gather data more efficiently and consistently.
+
+2. **Algorithm Optimization**:
+   - **Alternative Algorithms**: Explore and test alternative algorithms that might offer better performance or different complexity characteristics.
+   - **Hybrid Approaches**: Combine multiple algorithms to leverage their strengths and mitigate weaknesses.
+
+3. **Performance Analysis**:
+   - **Benchmarking**: Conduct thorough benchmarking against other known algorithms to identify performance bottlenecks and areas for improvement.
+   - **Profiling Tools**: Use profiling tools to analyze the algorithm's performance in detail and identify specific areas that can be optimized.
+
+4. **Theoretical Analysis**:
+   - **Complexity Proofs**: Develop formal proofs to better understand the theoretical underpinnings of the observed behavior.
+   - **Mathematical Modeling**: Create mathematical models to predict the algorithm's performance under various conditions.
+
+By implementing these strategies, we aim to gather more comprehensive data and explore different approaches to improve the algorithm's performance and reliability.
 
 
 

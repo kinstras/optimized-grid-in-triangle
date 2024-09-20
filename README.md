@@ -19,6 +19,13 @@
   - **Interactive Visualization**: Employs `matplotlib` for dynamic visualizations, allowing users to interact with the grid and triangle using sliders.
   - **Optimization**: Implements techniques to find the optimal grid placement, enhancing computational efficiency.
 
+
+<div align="center">
+  <img src="./pictures/example.gif" alt="GUI Dynamic GIF">
+  
+</div>
+
+
 ## 🛠 Technologies Used
 - **Python**: The core programming language for the project.
 - **NumPy**: For numerical computations and grid manipulations.

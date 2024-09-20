@@ -120,6 +120,9 @@ In this study, we examine the optimal placement of a grid frame within a random 
 </div>
 
 
+# Computational Complexity
+
+The theoretical complexity of our algorithm is $$O(n^3)$$. Therefore, the computation time should follow this complexity. However, our data for small values of \(L\) appears to exhibit a more linear behavior.
 
 
 

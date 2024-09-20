@@ -111,7 +111,13 @@ In this study, we examine the optimal placement of a grid frame within a random 
      
 5. **Result Analysis**:
    - We plotted the relationship between the improvement factor and the increase in L of the triangle.
-  
+
+     
+<div align="center">
+  <img src="pictures/comp_time_L_10m.png" alt="Figure 1" width="30%">
+  <img src="pictures/comp_time_L_20m.png" alt="Figure 2" width="30%">
+  <img src="pictures/comp_time_L_100m.png" alt="Figure 3" width="30%">
+</div>
 
 
 

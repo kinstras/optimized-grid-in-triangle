@@ -3,14 +3,10 @@
 
 ## Table of Contents
 - [Project Overview](#-project-overview)
-- [Technologies Used](#-technologies-used)
-- [Real-World Applications](#-real-world-applications)
-- [Highlights](#-highlights)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [Main Methodology](#-main-methodology)
+- [Computational Complexity](#-computational-complexity)
+- [Future Implementations](#-future-implementations)
+
 
 # 🔍 Project Overview
 - **Objective**: Optimize the placement of a grid within a triangle by rotating and shifting the grid to maximize or minimize the number of points inside the triangle.
@@ -177,7 +173,22 @@ We collected data for lengths (\(L\)) ranging from 1 meter to 51 meters to analy
 - **Improvement Factor**: The measure of how much the optimization improves efficiency.
 - **Time**: Represented using color coding to visualize the relationship between length and improvement factor over different time periods.
 
-By examining these variables, we aim to understand the correlation between the length of the fields and the improvement factor, and how this relationship evolves over time. The use of color coding for time helps to clearly illustrate trends and patterns in the data, providing valuable insights into the performance and effectiveness of our optimization algorithm.
+<p align="center">
+  <img src="pictures/scatter_plot_3var.png" width="70%">
+  <br>
+  <em>Figure 1:  Scatter Plot of Improvement Factor vs. Length with Time Color-Coded</em>
+</p>
+
+<p>
+  <br>
+</p>
+
+This scatter plot illustrates the relationship between the improvement factor and the length (\(L\)) of the fields, with time represented through color coding. The plot helps visualize how the improvement factor varies with length over different time periods, providing insights into the performance and effectiveness of the optimization algorithm.
+
+<p>
+  <br>
+</p>
+
 # Computational Complexity
 
 The theoretical complexity of our algorithm is $$O(n^3)$$. Therefore, the computation time should follow this complexity. However, our data for small values of \(L\) appears to exhibit a more linear behavior. This discrepancy is concerning and may be due to the limited amount of data we currently have.
@@ -185,7 +196,7 @@ The theoretical complexity of our algorithm is $$O(n^3)$$. Therefore, the comput
 <p align="center">
   <img src="pictures/expected_time_vs_length.png" width="70%">
   <br>
-  <em>Figure 1: Expected Computational time - Length</em>
+  <em>Figure 2: Line plot of expected Computational time vs. Length</em>
 </p>
 
 <p>

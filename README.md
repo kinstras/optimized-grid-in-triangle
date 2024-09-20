@@ -108,12 +108,10 @@ In this study, we examine the optimal placement of a grid frame within a random 
 
   $$\text{Improvement Factor} = \left(\frac{\text{Max Points} - \text{Min Points}}{\text{Min Points}}\right) \times 100$$
 
-
      
-
 5. **Result Analysis**:
-   - Create a graph showing the improvement factor in relation to L.
-   - Analyze the results to see how the improvement factor changes as L increases.
+   - We plotted the relationship between the improvement factor and the increase in L of the triangle.
+  
 
 
 

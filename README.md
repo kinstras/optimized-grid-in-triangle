@@ -127,7 +127,6 @@ python main.py
 </p>
 
 # Main Methodology
-
 In this study, we examine the optimal placement of a grid frame within a random scalene triangle. The process involves the following steps:
 
 1. **Triangle Design**:

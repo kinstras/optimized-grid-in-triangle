@@ -100,10 +100,20 @@ In this study, we examine the optimal placement of a grid frame within a random 
    - For each combination of angle and shift, we calculate the number of grid nodes that lie within the triangle.
    - We record the angle and shift that yield the maximum number of nodes within the triangle.
 
+
 4. **Improvement Factor Calculation**:
    - We calculate the improvement factor as the percentage increase in the number of nodes compared to the initial placement.
+   - Calculate the improvement factor for each value of L using the formula:
 
 
+  $$\text{Improvement Factor} = \left(\frac{\text{Max Points} - \text{Min Points}}{\text{Min Points}}\right) \times 100$$
+
+
+     
+
+5. **Result Analysis**:
+   - Create a graph showing the improvement factor in relation to L.
+   - Analyze the results to see how the improvement factor changes as L increases.
 
 
 

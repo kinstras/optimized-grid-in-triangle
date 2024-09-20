@@ -81,3 +81,37 @@ python main.py
 │ ├── plot.py # Updates GUI 
 
 │ └── test.py # # Calculates and plot the improvement percentage for a given length L
+
+# Main Methodology
+
+In this study, we examine the optimal placement of a grid frame within a random scalene triangle. The process involves the following steps:
+
+1. **Triangle Design**:
+   - We create a random scalene triangle with side lengths L.
+   - The triangle is defined by its vertices in a Cartesian coordinate system.
+
+2. **Grid Frame Definition**:
+   - We define a grid frame with a spacing of 1x1 meter for each node.
+   - The grid is initially placed with a random angle and vertical shift.
+
+3. **Optimal Placement Search**:
+   - We rotate the grid by 360° with a step of 1°.
+   - We shift the grid vertically with a step of 0.1 meter.
+   - For each combination of angle and shift, we calculate the number of grid nodes that lie within the triangle.
+   - We record the angle and shift that yield the maximum number of nodes within the triangle.
+
+4. **Improvement Factor Calculation**:
+   - We calculate the improvement factor as the percentage increase in the number of nodes compared to the initial placement.
+
+
+
+
+
+
+
+
+
+
+
+
+

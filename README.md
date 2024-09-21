@@ -75,7 +75,7 @@ By implementing these optimizations, we can significantly enhance the efficiency
 ### 🚀 Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/kinstras/optimal-grid-placement.git
+    git clone https://github.com/kinstras/optimized-grid-in-triangle.git
     cd optimal-grid-placement
     ```
 2. Install the required dependencies:

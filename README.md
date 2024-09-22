@@ -3,12 +3,15 @@
 
 ## Table of Contents
 - [Project Overview](#-project-overview)
+- [Getting Started](#-gettind-started)
 - [Main Methodology](#-main-methodology)
 - [Computational Complexity](#-computational-complexity)
 - [Future Implementations](#-future-implementations)
+- [Author](#-author)
+- [LICENCE](#-licence)
 
 
-# 🔍 Project Overview
+# Project Overview
 - **Objective**: Optimize the placement of a grid within a triangle by rotating and shifting the grid to maximize or minimize the number of points inside the triangle.
 - **Key Features**:
   - **Geometric Algorithms**: Utilizes advanced algorithms to rotate points and check point inclusion within a triangle.
@@ -197,7 +200,11 @@ To address this issue and improve our analysis, we propose the following future 
 By implementing these strategies, we aim to gather more comprehensive data and explore different approaches to improve the algorithm's performance and reliability.
 
 
+# Author
+- **Konstantinos Malakis** - Initial Work
 
+# Licence
+This project is licensed under the MIT License - see the [LICENCE.md](#-licence.md) file for details
 
 
 

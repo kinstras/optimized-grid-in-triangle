@@ -25,14 +25,8 @@
   <br>
 </p>
 
-### 🛠 Technologies Used
-- **Python**: The core programming language for the project.
-- **NumPy**: For numerical computations and grid manipulations.
-- **Matplotlib**: For creating interactive plots and visualizations.
 
-<p>
-  <br>
-</p>
+
 
 ### 🌍 Real-World Applications
 
@@ -44,35 +38,13 @@ Optimizing land field layouts can lead to more efficient use of agricultural lan
 - **Reduced Waste**: Efficient layouts minimize unused or poorly utilized areas, reducing waste and improving overall land use.
 - **Improved Irrigation**: Better planning can lead to more effective irrigation systems, ensuring that water is distributed evenly and efficiently across the fields.
 
-#### Land Surveying
-Enhanced grid placements can streamline the process of land surveying by:
-- **Accurate Measurements**: Providing precise and consistent grid layouts helps surveyors take accurate measurements and map out land more effectively.
-- **Time Efficiency**: Optimized layouts reduce the time required for surveying large areas, making the process quicker and more cost-effective.
-- **Resource Allocation**: Efficient surveying allows for better allocation of resources, such as manpower and equipment, leading to more effective project management.
-
-#### Resource Management
-Optimizing land use through better grid placements can also improve resource management by:
-- **Sustainable Practices**: Encouraging the use of sustainable practices that maximize land productivity while minimizing environmental impact.
-- **Cost Savings**: Reducing the costs associated with land development and maintenance by utilizing space more effectively.
-- **Enhanced Planning**: Providing a framework for better planning and decision-making in land development projects, ensuring that resources are used wisely and efficiently.
-
-By implementing these optimizations, we can significantly enhance the efficiency and productivity of various land-related activities, leading to better outcomes in agricultural planning, land surveying, and resource management.
-
-
 <p>
   <br>
 </p>
 
-### 📈 Highlights
-- Achieved significant improvements in grid placement efficiency.
-- Developed a user-friendly interface for interactive exploration of geometric configurations.
-- Leveraged scientific computing techniques to solve complex geometric problems.
+# Getting Started
 
-<p>
-  <br>
-</p>
-
-### 🚀 Installation
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 1. Clone the repository:
     ```bash
     git clone https://github.com/kinstras/optimized-grid-in-triangle.git
@@ -87,9 +59,9 @@ By implementing these optimizations, we can significantly enhance the efficiency
 </p>
 
 <ul>
-    <li><code>numpy</code> - For numerical operations</li>
-    <li><code>matplotlib</code> - For plotting graphs and visualizations</li>
-    <li><code>time</code> - For compute execution time </li>
+    <li><code>pip install numpy</code> - For numerical operations</li>
+    <li><code>pip install matplotlib</code> - For plotting graphs and visualizations</li>
+    <li><code>pip install time</code> - For compute execution time </li>
 </ul>
 
 <p>

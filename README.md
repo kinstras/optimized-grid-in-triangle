@@ -124,7 +124,7 @@ In this study, we examine the optimal placement of a grid frame within a random 
    - Calculate the improvement factor for each value of L using the formula:
 
 
-  $$\text{Improvement Factor} = \left(\frac{\text{Max Points} - \text{Min Points}}{\text{Min Points}}\right) \times 100$$
+  $$\text{Improvement Factor} = \left(\frac{\text{Max Points} - \text{Average Points of Random Position}}{\text{Average Points of Random Position}}\right) \times 100$$
 
      
 5. **Result Analysis**:

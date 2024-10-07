@@ -1,4 +1,5 @@
 import numpy as np
+import random
 
 # Function to rotate a point around a given center by a specified angle
 def rotate_point(px, py, angle, cx, cy):
@@ -15,15 +16,14 @@ def is_point_in_triangle(px, py, tri):
     x1, y1 = tri[0]
     x2, y2 = tri[1]
     x3, y3 = tri[2]
-    tolerance = 1e-9  # Small tolerance to handle floating point precision
-    # Calculate area of the triangle using determinant method
-    A = 0.5 * (-y2 * x3 + x1 * (y2 - y3) + x2 * y3 - x3 * y2)
-    sign = -1 if A < 0 else 1
-    # Calculate barycentric coordinates
-    s = (y1 * x3 - x1 * y3 + (y3 - y1) * px + (x1 - x3) * py) * sign
-    t = (x1 * y2 - y1 * x2 + (y1 - y2) * px + (x2 - x1) * py) * sign
-    # Check if point is inside the triangle
-    return s >= 0 and t >= 0 and (s + t) <= 2 * A * sign + tolerance
+    # Υπολογισμός των βαρυκεντρικών συντεταγμένων
+    denominator = ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3))
+    a = ((y2 - y3) * (px - x3) + (x3 - x2) * (py - y3)) / denominator
+    b = ((y3 - y1) * (px - x3) + (x1 - x3) * (py - y3)) / denominator
+    c = 1 - a - b
+
+    # Έλεγχος αν το σημείο βρίσκεται εντός του τριγώνου
+    return (a >= 0) and (b >= 0) and (c >= 0)
 
 # Function to count the number of points within a triangle in a given grid
 def count_points_in_triangle(grid_x, grid_y, triangle):
@@ -34,22 +34,47 @@ def count_points_in_triangle(grid_x, grid_y, triangle):
             count += 1
     return count
 
+
 # Function to find the best and worst grid placements within a triangle
-def find_best_and_worst_grid_placement(triangle, L, step):
+def find_best_and_worst_grid_placement(triangle):
     max_points = 0
     min_points = float('inf')
     best_angle = 0
     best_shift = 0
     worst_angle = 0
     worst_shift = 0
+    k=0
+
+    x1, y1 = triangle[0]
+    x2, y2 = triangle[1]
+    x3, y3 = triangle[2]
+    
+    # Calculate area of the triangle using determinant method
+    Area = 0.5 * (-y2 * x3 + x1 * (y2 - y3) + x2 * y3 - x3 * y2) 
+    
+    # Extract the coordinates of the triangle vertices
+    x_coords, y_coords = zip(*triangle)
+    
+    # Calculate the bounding box of the triangle
+    min_x, max_x = min(x_coords), max(x_coords)
+    min_y, max_y = min(y_coords), max(y_coords)
+
     
     # Iterate over all possible angles and shifts
-    for angle in range(0, 360):
-        for shift in np.arange(-L/2., L/2., step):
-            # Create a rotated grid
-            rotated_grid_x, rotated_grid_y = np.meshgrid(np.arange(-10, L + 10, 1), 
-                                                         np.arange(-10 + shift, L + shift + 10, 1))
-            rotated_grid_x, rotated_grid_y = rotate_point(rotated_grid_x, rotated_grid_y, angle, L/2, L/2)
+    for angle in range(0, 91, 5):
+        for shift in np.arange(0, 1, step=0.1):
+
+            # Create a scaled grid based on the bounding box of the triangle
+            grid_x_range = np.arange(min_x - 5, max_x + 5, 1)  # 1 meter apart horizontally
+            grid_y_range = np.arange(min_y - 5 + shift, max_y + 5 + shift, 4)  # 4 meter apart vertically
+            
+            # Create the meshgrid based on the triangle's bounding box
+            rotated_grid_x, rotated_grid_y = np.meshgrid(grid_x_range, grid_y_range)
+
+            # Rotate the grid points around the center of the triangle
+            center_x, center_y = np.mean(x_coords), np.mean(y_coords)
+            rotated_grid_x, rotated_grid_y = rotate_point(rotated_grid_x, rotated_grid_y, angle, center_x, center_y)
+
             # Count points within the triangle
             points_in_triangle = count_points_in_triangle(rotated_grid_x, rotated_grid_y, triangle)
             # Update best and worst placements
@@ -61,5 +86,18 @@ def find_best_and_worst_grid_placement(triangle, L, step):
                 min_points = points_in_triangle
                 worst_angle = angle
                 worst_shift = shift
-                
-    return best_angle, best_shift, max_points, worst_angle, worst_shift, min_points
+            k +=1
+    
+    
+        
+        
+    return best_angle, best_shift, max_points, worst_angle, worst_shift, min_points, Area
+    
+    
+
+
+  
+
+
+
+

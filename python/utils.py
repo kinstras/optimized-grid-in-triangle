@@ -66,7 +66,7 @@ def find_best_and_worst_grid_placement(triangle):
     
     # Iterate over all possible angles and shifts
     for angle in range(0, 91, 5):
-        for shift in np.arange(0, 1, step=0.1):
+        for shift in np.arange(0, 4.5, step=0.1):
             
             # Create a scaled grid based on the bounding box of the triangle
             grid_x_range = np.arange(min_x - 5, max_x + 5, 1)  # 1 meter apart horizontally

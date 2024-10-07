@@ -1,5 +1,7 @@
 import numpy as np
 import random
+import matplotlib.pyplot as plt 
+
 
 # Function to rotate a point around a given center by a specified angle
 def rotate_point(px, py, angle, cx, cy):
@@ -48,9 +50,11 @@ def find_best_and_worst_grid_placement(triangle):
     x1, y1 = triangle[0]
     x2, y2 = triangle[1]
     x3, y3 = triangle[2]
-    
+   
+  
     # Calculate area of the triangle using determinant method
     Area = 0.5 * (-y2 * x3 + x1 * (y2 - y3) + x2 * y3 - x3 * y2) 
+    
     
     # Extract the coordinates of the triangle vertices
     x_coords, y_coords = zip(*triangle)
@@ -63,7 +67,7 @@ def find_best_and_worst_grid_placement(triangle):
     # Iterate over all possible angles and shifts
     for angle in range(0, 91, 5):
         for shift in np.arange(0, 1, step=0.1):
-
+            
             # Create a scaled grid based on the bounding box of the triangle
             grid_x_range = np.arange(min_x - 5, max_x + 5, 1)  # 1 meter apart horizontally
             grid_y_range = np.arange(min_y - 5 + shift, max_y + 5 + shift, 4)  # 4 meter apart vertically
@@ -95,9 +99,46 @@ def find_best_and_worst_grid_placement(triangle):
     
     
 
+# Function to handle mouse scroll events (zoom in/out)
+def zoom(event, ax):
+    base_scale = 1.2  # Define the zoom factor
 
+    # Get the current axis limits
+    cur_xlim = ax.get_xlim()
+    cur_ylim = ax.get_ylim()
+
+    # Calculate the mouse position in data coordinates
+    xdata = event.xdata
+    ydata = event.ydata
+
+    # Determine the scale factor depending on the scroll direction
+    if event.button == 'up':
+        scale_factor = 1 / base_scale
+    elif event.button == 'down':
+        scale_factor = base_scale
+    else:
+        # Ignore any other scroll directions
+        return
+
+    # Update the limits based on the scale factor
+    new_xlim = [0,xdata + (cur_xlim[1] - xdata) * scale_factor]
+    new_ylim = [0,ydata + (cur_ylim[1] - ydata) * scale_factor]
+
+    # Apply the new limits
+    ax.set_xlim(new_xlim)
+    ax.set_ylim(new_ylim)
+
+    # Redraw the figure with updated limits
+    plt.draw()
   
-
+def clear_triangle(event, ax, triangle, slider_angle, slider_vertical):
+    # Clear the current triangle points
+    triangle.clear()  # Clear the triangle list
+    ax.clear()  # Clear the current triangle points
+    plt.draw()
+    global triangle_defined
+    triangle_defined = False  # Reset the triangle defined flag
+   
 
 
 

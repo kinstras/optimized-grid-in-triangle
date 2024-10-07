@@ -35,10 +35,7 @@ def update(val, ax, original_triangle, slider_angle, slider_vertical, L):
         # Clear the axes but retain axis limits
         ax.clear()
 
-        # Manually set the axis limits to prevent auto-rescaling
-        ax.set_xlim([0, 20])
-        ax.set_ylim([0, 20])
-    
+       
         # Draw the fixed triangle
         ax.plot(*zip(*(list(original_triangle) + [original_triangle[0]])), 'b-', label='Triangle')
 
@@ -69,14 +66,14 @@ def update(val, ax, original_triangle, slider_angle, slider_vertical, L):
         fontweight='bold', 
         color='darkblue', 
         bbox=dict(facecolor='lightyellow', alpha=0.7, edgecolor='black', boxstyle='round,pad=0.5'))
-    plt.draw()
+    if num_points < 100:
+        plt.draw()
 
 # Function to plot a triangle
 def plot_triangle(ax, triangle):
     triangle = np.vstack([triangle, triangle[0]])  # Close the triangle
     ax.plot(triangle[:, 0], triangle[:, 1], 'r-')
-    ax.set_xlim([0, 20])
-    ax.set_ylim([0, 20])
+    
 
 # Function to handle mouse clicks and set triangle vertices
 def onclick(event, ax, triangle, slider_angle, slider_vertical, L):
@@ -87,8 +84,7 @@ def onclick(event, ax, triangle, slider_angle, slider_vertical, L):
         if len(triangle) < 3:
             triangle.append([event.xdata, event.ydata])
             ax.plot(event.xdata, event.ydata, 'bo')  # Mark the clicked point
-            ax.set_xlim([0, 20])  # Manually reset the x-limits
-            ax.set_ylim([0, 20])  # Manually reset the y-limits
+          
             plt.draw()
         # Once 3 points are captured, plot the triangle
         if len(triangle) == 3:

@@ -20,7 +20,7 @@
 
 
 <div align="center">
-  <img src="./pictures/example.gif" alt="GUI Dynamic GIF">
+  <img src="./pictures/interactive_user_gif.gif" alt="GUI Dynamic GIF">
   
 </div>
 
@@ -105,15 +105,15 @@ python main.py
 In this study, we examine the optimal placement of a grid frame within a random scalene triangle. The process involves the following steps:
 
 1. **Triangle Design**:
-   - We create a random scalene triangle with side lengths L.
+   - User creates a random scalene triangle.
    - The triangle is defined by its vertices in a Cartesian coordinate system.
 
 2. **Grid Frame Definition**:
-   - We define a grid frame with a spacing of 1x1 meter for each node.
+   - We define a grid frame with a spacing of nxn meter for each node.
    - The grid is initially placed with a random angle and vertical shift.
 
 3. **Optimal Placement Search**:
-   - We rotate the grid by 360° with a step of 1°.
+   - We rotate the grid by 90° with a step of 1°.
    - We shift the grid vertically with a step of 0.1 meter.
    - For each combination of angle and shift, we calculate the number of grid nodes that lie within the triangle.
    - We record the angle and shift that yield the maximum number of nodes within the triangle.
@@ -121,85 +121,12 @@ In this study, we examine the optimal placement of a grid frame within a random 
 
 4. **Improvement Factor Calculation**:
    - We calculate the improvement factor as the percentage increase in the number of nodes compared to the initial placement.
-   - Calculate the improvement factor for each value of L using the formula:
+   - Calculate the improvement factor using the formula:
 
 
   $$\text{Improvement Factor} = \left(\frac{\text{Max Points} - \text{Average Points of Random Position}}{\text{Average Points of Random Position}}\right) \times 100$$
 
      
-5. **Result Analysis**:
-   - We plotted the relationship between the improvement factor and the increase in L of the triangle.
-
-     
-<div align="center">
-  <img src="pictures/comp_time_L_10m.png" alt="Figure 1" width="30%">
-  <img src="pictures/comp_time_L_20m.png" alt="Figure 2" width="30%">
-  <img src="pictures/comp_time_L_100m.png" alt="Figure 3" width="30%">
-</div>
-
-<p>
-  <br>
-</p>
-
-
-We collected data for lengths (\(L\)) ranging from 1 meter to 51 meters to analyze how the improvement factor relates to length over time. Our analysis involves three key variables:
-- **Length (\(L\))**: The range of lengths from 1 meter to 51 meters.
-- **Improvement Factor**: The measure of how much the optimization improves efficiency.
-- **Time**: Represented using color coding to visualize the relationship between length and improvement factor over different time periods.
-
-<p align="center">
-  <img src="pictures/scatter_plot_3var.png" width="70%">
-  <br>
-  <em>Figure 1:  Scatter Plot of Improvement Factor vs. Length with Time Color-Coded</em>
-</p>
-
-<p>
-  <br>
-</p>
-
-This scatter plot illustrates the relationship between the improvement factor and the length (\(L\)) of the fields, with time represented through color coding. The plot helps visualize how the improvement factor varies with length over different time periods, providing insights into the performance and effectiveness of the optimization algorithm.
-
-<p>
-  <br>
-</p>
-
-# Computational Complexity
-
-The theoretical complexity of our algorithm is $$O(n^3)$$. Therefore, the computation time should follow this complexity. However, our data for small values of \(L\) appears to exhibit a more linear behavior. This discrepancy is concerning and may be due to the limited amount of data we currently have.
-
-<p align="center">
-  <img src="pictures/expected_time_vs_length.png" width="70%">
-  <br>
-  <em>Figure 2: Line plot of expected Computational time vs. Length</em>
-</p>
-
-<p>
-  <br>
-</p>
-
-# Future Implementations
-
-To address this issue and improve our analysis, we propose the following future implementations:
-
-1. **Increase Data Collection**:
-   - **Expand Dataset**: Collect more data points, especially for larger values of \(L\), to better understand the algorithm's behavior across different scales.
-   - **Automated Data Collection**: Implement automated tools to gather data more efficiently and consistently.
-
-2. **Algorithm Optimization**:
-   - **Alternative Algorithms**: Explore and test alternative algorithms that might offer better performance or different complexity characteristics.
-   - **Hybrid Approaches**: Combine multiple algorithms to leverage their strengths and mitigate weaknesses.
-
-3. **Performance Analysis**:
-   - **Benchmarking**: Conduct thorough benchmarking against other known algorithms to identify performance bottlenecks and areas for improvement.
-   - **Profiling Tools**: Use profiling tools to analyze the algorithm's performance in detail and identify specific areas that can be optimized.
-
-4. **Theoretical Analysis**:
-   - **Complexity Proofs**: Develop formal proofs to better understand the theoretical underpinnings of the observed behavior.
-   - **Mathematical Modeling**: Create mathematical models to predict the algorithm's performance under various conditions.
-
-By implementing these strategies, we aim to gather more comprehensive data and explore different approaches to improve the algorithm's performance and reliability.
-
-
 # Author
 - **Konstantinos Malakis** - Initial Work
 

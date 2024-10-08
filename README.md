@@ -5,8 +5,6 @@
 - [Project Overview](#-project-overview)
 - [Getting Started](#-gettind-started)
 - [Main Methodology](#-main-methodology)
-- [Computational Complexity](#-computational-complexity)
-- [Future Implementations](#-future-implementations)
 - [Author](#-author)
 - [LICENCE](#-licence)
 

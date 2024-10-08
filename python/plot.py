@@ -66,6 +66,9 @@ def update(val, ax, original_triangle, slider_angle, slider_vertical, L):
         fontweight='bold', 
         color='darkblue', 
         bbox=dict(facecolor='lightyellow', alpha=0.7, edgecolor='black', boxstyle='round,pad=0.5'))
+
+    ax.set_xlim(-1, max_x + 5)
+    ax.set_ylim(-1, max_y + 5)
     if num_points < 100:
         plt.draw()
 
